@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>BezaTo Consultancy</title>
+    <script>
+      // GitHub Pages SPA redirect trick.
+      // Encodes the intended URL into a query param and redirects to index.html,
+      // which then restores the correct path via history.replaceState.
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.host + l.pathname.split('/').slice(0, 1).join('/') +
+        '/?p=' + encodeURIComponent(l.pathname + l.search) +
+        (l.hash ? l.hash : '')
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
